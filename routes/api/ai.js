@@ -20,7 +20,7 @@ router.post("/chat", async (req, res) => {
     res.setHeader("Transfer-Encoding", "chunked");
   
     const stream = await openrouter.chat.send({
-      model: "nex-agi/deepseek-v3.1-nex-n1:free",
+      model: "deepseek/deepseek-r1-0528:free",
       messages: [{ role: "user", content: message }],
       stream: true,
     });
